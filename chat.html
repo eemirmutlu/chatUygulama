@@ -2,57 +2,76 @@
 <html lang="en">
 
 <head>
-  <title>Kayıt Sayfası</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Real-time Chat</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
   <style>
     body {
       background-color: #343a40;
-      color: white;
+      color: #fff;
+      margin-top: 50px;
     }
 
-    .custom-form {
-      max-width: 400px;
-      margin: auto;
+    #chatContainer {
+      height: 700px;
+      overflow-y: scroll;
+      border: 1px solid #454d55;
+      border-radius: 10px;
+      padding: 10px;
+      margin-bottom: 20px;
+      background-color: #495057;
     }
 
-    a {
-      text-decoration: none;
+    #messageInput {
+      margin-right: 10px;
+      transition: background-color 0.3s ease-in-out;
+      color: #fff;
+      background-color: #212529;
+    }
+
+    #messageInput:focus {
+      background-color: #212529;
+    }
+
+    #messageInput::placeholder {
+      color: #adb5bd;
+    }
+
+    .form-control,
+    .btn-primary {
+      background-color: #212529;
+      color: #fff;
+      border-color: #212529;
+    }
+
+    .btn-primary:hover {
+      background-color: #1b1b1b;
+      border-color: #343a40;
     }
   </style>
 </head>
 
 <body>
-  <main class="container py-5">
-    <h1 class="text-center fw-bold">Kayıt Ol</h1>
-    <form id="registerForm" class="custom-form">
-      <div class="mb-3">
-        <input type="text" id="username" class="form-control fw-bold" placeholder="Kullanıcı Adı">
+  <main>
+    <div class="container">
+      <h1 class="text-center">Real-time Chat</h1>
+      <div class="fw-bold" id="chatContainer"></div>
+      <div class="input-group mb-3">
+        <input type="text" class="form-control fw-bold" id="messageInput" placeholder="Mesajınızı girin">
+        <button class="btn btn-primary fw-bold" onclick="sendMessage()">Gönder</button>
       </div>
-      <div class="mb-3">
-        <input type="email" id="email" class="form-control fw-bold" placeholder="E-mail Adresi">
+      <div class="container text-center">
+        <a class="btn btn-primary fw-bold" href="anasayfa.html">Ana Sayfa</a>
       </div>
-      <div class="mb-3">
-        <input type="password" id="password" class="form-control fw-bold" placeholder="Parola">
-      </div>
-      <div class="mb-3">
-        <textarea id="bio" class="form-control fw-bold" placeholder="Kısa Biyografi"></textarea>
-      </div>
-      <div class="mb-3">
-        <input type="file" id="profilePic" class="form-control fw-bold" accept="image/*">
-      </div>
-      <button type="submit" class="btn btn-danger fw-bold">Kayıt Ol</button>
-      <div>
-        <p class="fw-bold">Eğer hesabınız varsa <a class="text-danger" href="index.html">buraya</a> tıklayabilirsiniz.</p>
-      </div>
-    </form>
+    </div>
   </main>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
     crossorigin="anonymous"></script>
-  <script src="/js/register.js"></script>
+  <script src="/js/chat.js"></script>
 </body>
 
 </html>
