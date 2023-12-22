@@ -9,10 +9,10 @@ document.getElementById('loginForm').addEventListener('submit', function (event)
 
     if (enteredEmail === storedEmail && enteredPassword === storedPassword) {
         alert('Giriş başarılı!');
-        window.location.href = '/html/anasayfa.html';
+        window.location.href = 'anasayfa.html';
     } else {
         alert('E-posta veya şifre hatalı.');
-        window.location.href = '/html/kayit.html';
+        window.location.href = 'kayit.html';
     }
 });
 
