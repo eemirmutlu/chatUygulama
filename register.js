@@ -18,6 +18,6 @@ document.getElementById('registerForm').addEventListener('submit', function (eve
     localStorage.setItem('bio', bio);
 
     alert('Kayıt başarılı! Giriş yapabilirsiniz.');
-    window.location.href = '/html/index.html'; // Kayıt sonrası giriş sayfasına yönlendirme
+    window.location.href = 'index.html'; // Kayıt sonrası giriş sayfasına yönlendirme
 });
 
