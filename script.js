@@ -18,5 +18,5 @@ document.getElementById('loginForm').addEventListener('submit', function (event)
 
 function goToRegisterPage() {
     alert('Kayıt sayfasına yönlendiriliyorsunuz.');
-    window.location.href = '/html/kayit.html';
+    window.location.href = 'kayit.html';
 }
