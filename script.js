@@ -9,7 +9,7 @@ document.getElementById('loginForm').addEventListener('submit', function(event) 
 
     if (enteredEmail == storedEmail && enteredPassword == storedPassword) {
         alert('Giriş başarılı')
-        window.location.href = '/html/anasayfa.html'
+        window.location.href = 'anasayfa.html'
     }
 })
 
