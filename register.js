@@ -17,6 +17,6 @@ document.getElementById('registerForm').addEventListener('submit', function(even
     localStorage.setItem('password', password)
     localStorage.setItem('bio', bio)
 
-    window.location.href = '/html/index.html'
+    window.location.href = 'index.html'
 
 })
