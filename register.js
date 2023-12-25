@@ -1,23 +1,22 @@
-document.getElementById('registerForm').addEventListener('submit', function (event) {
-    event.preventDefault();
+document.getElementById('registerForm').addEventListener('submit', function(event) {
+    event.preventDefault(); // prevent form from submitting normally
 
-    const username = document.getElementById('username').value;
-    const email = document.getElementById('email').value;
-    const password = document.getElementById('password').value;
-    const bio = document.getElementById('bio').value;
+    const username = document.getElementById('username').value
+    const email = document.getElementById('email').value
+    const password = document.getElementById('password').value
+    const bio = document.getElementById('bio').value
 
     if (!username || !email || !password) {
-        alert('Lütfen tüm alanları doldurun.');
-        return; // Kayıt işlemi durduruluyor
+        alert('gerekli alanları doldurunuz.')
+        return
     }
 
+    alert('Kaydınız oluşturulmuştur.')
+    localStorage.setItem('username', username)
+    localStorage.setItem('email', email)
+    localStorage.setItem('password', password)
+    localStorage.setItem('bio', bio)
 
-    localStorage.setItem('username', username);
-    localStorage.setItem('email', email);
-    localStorage.setItem('password', password);
-    localStorage.setItem('bio', bio);
+    window.location.href = '/html/index.html'
 
-    alert('Kayıt başarılı! Giriş yapabilirsiniz.');
-    window.location.href = 'index.html'; // Kayıt sonrası giriş sayfasına yönlendirme
-});
-
+})

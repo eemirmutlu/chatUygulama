@@ -1,22 +1,18 @@
-document.getElementById('loginForm').addEventListener('submit', function (event) {
-    event.preventDefault();
+document.getElementById('loginForm').addEventListener('submit', function(event) {
+    event.preventDefault(); // prevent form from submitting normally
 
-    const enteredEmail = document.getElementById('email').value;
-    const enteredPassword = document.getElementById('password').value;
+    const enteredEmail = document.getElementById('email').value
+    const enteredPassword = document.getElementById('password').value
 
-    const storedEmail = localStorage.getItem('email');
-    const storedPassword = localStorage.getItem('password');
+    const storedEmail = localStorage.getItem('email')
+    const storedPassword = localStorage.getItem('password')
 
-    if (enteredEmail === storedEmail && enteredPassword === storedPassword) {
-        alert('Giriş başarılı!');
-        window.location.href = 'anasayfa.html';
-    } else {
-        alert('E-posta veya şifre hatalı.');
-        window.location.href = 'kayit.html';
+    if (enteredEmail == storedEmail && enteredPassword == storedPassword) {
+        alert('Giriş başarılı')
+        window.location.href = '/html/anasayfa.html'
     }
-});
+})
 
 function goToRegisterPage() {
-    alert('Kayıt sayfasına yönlendiriliyorsunuz.');
-    window.location.href = 'kayit.html';
+    alert('Kayıt sayfasına yönlendiriliyorsunuz.')
 }

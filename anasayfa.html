@@ -11,12 +11,20 @@
     integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 </head>
 
+
 <body class="bg-dark">
+
+  <div id="loadingOverlay" class="loading-overlay">
+    <div class="loader"></div>
+  </div>
+
+
+
   <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
     <div class="container-fluid d-flex justify-content-between">
       <a class="navbar-brand fw-bold text-danger">ANA SAYFA</a>
       <form class="d-flex">
-        <a class="btn btn-outline- btn-danger fw-bold" href="/html/index.html">Çıkış Yap</a>
+        <a onclick="logOut()" class="btn btn-outline- btn-danger fw-bold" href="/html/index.html">Çıkış Yap</a>
       </form>
     </div>
   </nav>
@@ -25,20 +33,30 @@
 
 
 
-  
+
 
 
 
   <main class="container mt-4 text-white">
     <div id="userInfo">
-      <h2 class="fw-bold text-danger">Kullanıcı</h2>
+      <div class="d-flex">
+        <h2 class="fw-bold text-danger">Kullanıcı</h2>
+
+        <div style="padding-top: 11px; padding-left: 15px;" id="onlineStatus" class="position-absolutetranslate-middle">
+          <div id="onlineIndicator" class="rounded-5" style="width: 20px; height: 20px; background-color: gray;">
+            <p id="onlineText" class="ms-4 pb-2 fw-bold"></p>
+          </div>
+        </div>
+      </div>
+      
       <p><strong>Kullanıcı Adı:</strong> <span id="username"></span></p>
       <p><strong>E-mail:</strong> <span id="email"></span></p>
       <p><strong>Kısa Biyografi:</strong></p>
+
       <p id="bio"></p>
     </div>
     <div class="container text-center">
-      <a href="chat.html" class="btn btn-danger w-25 fw-bold">Chat</a>
+      <a onclick="goToChatPage()" href="/html/chat.html" class="btn btn-danger w-25 fw-bold">Chat</a>
     </div>
   </main>
 
@@ -47,7 +65,7 @@
     integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
     crossorigin="anonymous"></script>
 
-  <script src="homepage.js"></script>
+  <script src="/js/homepage.js"></script>
 </body>
 
 </html>
