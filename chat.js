@@ -9,7 +9,7 @@ socket.onmessage = function (event) {
     displayMessage(receivedMessage);
 };
 
-function sendMesasge() {
+function sendMessage() {
     const messageInput = document.getElementById('messageInput')
     const message = messageInput.value.trim()
 
@@ -32,6 +32,6 @@ function displayMessage(message) {
 
 document.getElementById('messageInput').addEventListener('keypress', function(event) {
     if (event.key === 'Enter') {
-        sendMesasge()
+        sendMessage()
     }
 })
